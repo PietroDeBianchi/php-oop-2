@@ -1,6 +1,5 @@
 <?php
 // Connect database & models to index.php
-require_once  __DIR__ . '/Database/db.php';
 require_once  __DIR__ . '/Models/Category.php';
 require_once  __DIR__ . '/Models/Products.php';
 require_once  __DIR__ . '/Models/Users.php';
@@ -30,7 +29,7 @@ require_once  __DIR__ . '/Models/Users.php';
             <i class="fa-solid fa-paw"></i>
         </div>
         <form class="d-flex" role="search">
-            <button class="btn btn-primary" type="submit">Sing-Up</button>
+            <button class="btn btn-primary" type="submit">Up Grade</button>
         </form>
     </div>
     </nav>

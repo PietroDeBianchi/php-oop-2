@@ -2,16 +2,13 @@
 // Define a class called "Category"
 class Category {
 
-    public $animals;
+    public $animal;
+    public $icon;
 
-    public function __construct(string $_animals){
-        $this->animals = $_animals;
+    public function __construct( String $_animal, String $_icon) {
+        $this->animal = $_animal;
+        $this->icon = $_icon;
     }
-    
-    
-    public function getSpecies(){
-        return $this->animals;
-    }
-    
+
 }
 ?>

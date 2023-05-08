@@ -1,7 +1,7 @@
 <?php
 // Connect models
 require_once  __DIR__ . '/Category.php';
-require_once __DIR__ . '/Traits/Weight.php';
+require_once __DIR__ . '/../Traits/Weight.php';
 // Create Products's Class
 class Products
 {

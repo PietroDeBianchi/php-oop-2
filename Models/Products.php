@@ -1,6 +1,7 @@
 <?php
 // Connect models
 require_once  __DIR__ . '/Category.php';
+require_once __DIR__ . '/Traits/Weight.php';
 // Create Products's Class
 class Products
 {
@@ -11,6 +12,8 @@ class Products
     public $weight;
     public $category;
     public $image;
+
+    use Weight;
 
     public function __construct(string $name, float $price, Category $category)
     {

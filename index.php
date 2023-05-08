@@ -8,21 +8,25 @@ require_once  __DIR__ . '/Models/Game.php';
 $cat = new Category('Cat', 'fa-solid fa-cat');
 $dog = new Category('Dog', 'fa-solid fa-dog');
 // Create new Product objects
-$collare = new Products('Kennel', 35, $dog);
+$collare = new Products('Collar', 35, $dog);
 $collare->description = 'The purr-fect accessory for your feline friend. Keep them stylish and safe with this cute collar that jingles!';
 $collare->image = 'https://picsum.photos/seed/picsum/200';
+$collare->weight = '20gr';
 // Create new Product objects
-$cuccia = new Products('Collar', 15, $cat);
+$cuccia = new Products('Kennell', 15, $cat);
 $cuccia->description = 'The purr-fect accessory for your feline friend. Keep them stylish and safe with this cute collar that jingles!';
 $cuccia->image = 'https://picsum.photos/seed/picsum/200';
+$cuccia->weight = '1.6kg';
 // Create new Food objects
 $osso = new Food('Bone', 12, $dog, 125);
 $osso->description = 'The perfect way to keep your pooch happy, healthy, and occupied. It is like a chew toy and snack in one';
 $osso->image = 'https://picsum.photos/seed/picsum/200';
+$osso->weight = '120gr';
 // Create new Game objects
 $palla = new Game('Ball', 9.99, $dog, 'Gomma');
 $palla->description = 'The ultimate toy for any pup who loves to fetch, chew, or just go nuts! Bouncy, bright, and built to last!';
 $palla->image = 'https://picsum.photos/seed/picsum/200';
+$palla->weight = '60gr';
 // Create and array of Products
 $listItem = [
     $collare,
@@ -79,6 +83,7 @@ $listItem = [
                                     <a href=""><i class="<?php echo $item->category->icon; ?>"></i></a>
                                 </div>
                                 <p><?php echo $item->price; ?> €</p>
+                                <p><?php echo $item->weight; ?></p>
                                 <p>
                                     <?php if ($item->getClass() == 'Food') { ?>
                                         Value: <?php echo $item->calories; ?> Kcal

@@ -7,6 +7,7 @@ require_once __DIR__ . '/../Traits/Weight.php';
 class Food extends Products
 {
     public $calories;
+
     use Weight;
 
     public function __construct(string $name, float $price, Category $category, int $calories)

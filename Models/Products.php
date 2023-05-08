@@ -1,33 +1,35 @@
 <?php
 
 require_once  __DIR__ . '/Category.php';
+class Products
+{
 
-// Define a class called "Products"
-class Products {
-
-    public $animal;
-    public $price;
+    public $name;
     public $description;
+    public $price;
     public $weight;
     public $category;
+    public $image;
 
-    public function __construct( String $_animal, float $_price, Category $_category) 
+    public function __construct(string $name, float $price, Category $category)
     {
-        $this->animal = $_animal;
-        $this->price = $_price;
-        $this->category = $_category;
+        $this->name = $name;
+        $this->price = $price;
+        $this->category = $category;
     }
 
-    public function getProducts() 
+    public function getProduct()
     {
-        return [
-            'Animal' => $this->animal, 
-            'Description' => $this->description, 
-            'Category' => $this->category, 
-            'price' => $this->price
-        ];
+        return "Name: $this->name, Description: $this->description, Price: $this->price";
     }
+
+    // public function setWeight(float $weight)
+    // {
+    //     $this->weight = $weight;
+    // }
+
+    // public function getWeight(float $weight)
+    // {
+    //     return $this->weight;
+    // }
 }
-
-?>
-

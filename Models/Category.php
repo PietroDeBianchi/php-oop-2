@@ -1,14 +1,16 @@
 <?php
-// Define a class called "Category"
+
 class Category {
 
-    public $animal;
+    public $name;
     public $icon;
 
-    public function __construct( String $_animal, String $_icon) {
-        $this->animal = $_animal;
-        $this->icon = $_icon;
+    public function __construct(string $name, string $icon)
+    {
+        $this->name = $name;
+        $this->icon = $icon;
     }
 
 }
+
 ?>

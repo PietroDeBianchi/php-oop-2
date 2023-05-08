@@ -9,6 +9,7 @@ main {
 }
 
 nav {
+
     i {
         color: white;
         font-size: 24px;
@@ -16,5 +17,14 @@ nav {
 }
 
 .card {
-    width: calc((100% / 5) - 20px);
+    width: calc((100% / 4) - 20px);
+    margin-top: 20px;
+
+    img {
+        height: 240px;
+    }
+
+    i {
+        padding-left: 12px;
+    }
 }

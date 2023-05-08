@@ -14,5 +14,12 @@ nav i {
 }
 
 .card {
-  width: calc(20% - 20px);
+  width: calc(25% - 20px);
+  margin-top: 20px;
+}
+.card img {
+  height: 240px;
+}
+.card i {
+  padding-left: 12px;
 }/*# sourceMappingURL=style.css.map */

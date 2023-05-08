@@ -2,7 +2,12 @@
 // Connect database & models to index.php
 require_once  __DIR__ . '/Models/Category.php';
 require_once  __DIR__ . '/Models/Products.php';
-require_once  __DIR__ . '/Models/Users.php';
+
+$cat = new Category('Cat', 'fa-solid fa-cat');
+$dog = new Category('Dog', 'fa-solid fa-dog');
+
+
+
 
 
 ?>
@@ -29,7 +34,7 @@ require_once  __DIR__ . '/Models/Users.php';
             <i class="fa-solid fa-paw"></i>
         </div>
         <form class="d-flex" role="search">
-            <button class="btn btn-primary" type="submit">Up Grade</button>
+            <button class="btn btn-primary" type="submit">UpGrade</button>
         </form>
     </div>
     </nav>

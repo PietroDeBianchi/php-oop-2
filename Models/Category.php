@@ -1,5 +1,6 @@
 <?php
 
+// Create Category's Class
 class Category {
 
     public $name;
@@ -12,5 +13,3 @@ class Category {
     }
 
 }
-
-?>

@@ -1,29 +1,29 @@
 <?php
-// Connect database & models to index.php
+// Connect models to index.php
 require_once  __DIR__ . '/Models/Category.php';
 require_once  __DIR__ . '/Models/Products.php';
 require_once  __DIR__ . '/Models/Food.php';
 require_once  __DIR__ . '/Models/Game.php';
-
+// Create two Category objects
 $cat = new Category('Cat', 'fa-solid fa-cat');
 $dog = new Category('Dog', 'fa-solid fa-dog');
-
+// Create new Product objects
 $collare = new Products('Kennel', 35, $dog);
 $collare->description = 'The purr-fect accessory for your feline friend. Keep them stylish and safe with this cute collar that jingles!';
 $collare->image = 'https://picsum.photos/seed/picsum/200';
-
+// Create new Product objects
 $cuccia = new Products('Collar', 15, $cat);
 $cuccia->description = 'The purr-fect accessory for your feline friend. Keep them stylish and safe with this cute collar that jingles!';
 $cuccia->image = 'https://picsum.photos/seed/picsum/200';
-
+// Create new Food objects
 $osso = new Food('Bone', 12, $dog, 125);
 $osso->description = 'The perfect way to keep your pooch happy, healthy, and occupied. It is like a chew toy and snack in one';
 $osso->image = 'https://picsum.photos/seed/picsum/200';
-
+// Create new Game objects
 $palla = new Game('Ball', 9.99, $dog, 'Gomma');
 $palla->description = 'The ultimate toy for any pup who loves to fetch, chew, or just go nuts! Bouncy, bright, and built to last!';
 $palla->image = 'https://picsum.photos/seed/picsum/200';
-
+// Create and array of Products
 $listItem = [
     $collare,
     $osso,

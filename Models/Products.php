@@ -1,6 +1,7 @@
 <?php
-
+// Connect models
 require_once  __DIR__ . '/Category.php';
+// Create Products's Class
 class Products
 {
 

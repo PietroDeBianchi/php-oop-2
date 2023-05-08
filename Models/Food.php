@@ -12,4 +12,10 @@ class Food extends Products
         $this->calories = $calories;
         parent::__construct($name, $price, $category);
     }
+
+    // Create a function  to call class name
+    public function getClass()
+    {
+        return get_class();
+    }
 }

@@ -24,6 +24,12 @@ class Products
         return "Name: $this->name, Description: $this->description, Price: $this->price";
     }
 
+    // Create a function  to call class name
+    public function getClass()
+    {
+        return get_class();
+    }
+
     // public function setWeight(float $weight)
     // {
     //     $this->weight = $weight;

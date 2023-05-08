@@ -58,7 +58,7 @@ $listItem = [
         <div class="container-fluid">
             <div>
                 <a class="navbar-brand me-1">Animal One</a>
-                <i class="fa-solid fa-paw"></i>
+                <a href=""><i class="fa-solid fa-paw"></i></a>
             </div>
             <form class="d-flex" role="search">
                 <button class="btn btn-primary" type="submit">UpGrade</button>
@@ -72,14 +72,27 @@ $listItem = [
                 <div class="card">
                     <img src="<?php echo $item->image; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class=" card-title"><?php echo $item->name; ?></h5>
-                            <a href=""><i class="<?php echo $item->category->icon; ?>"></i></a>
-                        </div>
-                        <span><?php echo $item->price; ?> €</span>
-                        <p><?php echo $item->description; ?></p>
-                        <div>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        <div class="d-flex flex-column justify-content-between mybox">
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <h5 class=" card-title"><?php echo $item->name; ?></h5>
+                                    <a href=""><i class="<?php echo $item->category->icon; ?>"></i></a>
+                                </div>
+                                <p><?php echo $item->price; ?> €</p>
+                                <p>
+                                    <?php if ($item->getClass() == 'Food') { ?>
+                                        Value: <?php echo $item->calories; ?> Kcal
+                                    <?php } elseif ($item->getClass() == 'Game') { ?>
+                                        Materials: <?php echo $item->material; ?>
+                                    <?php } elseif ($item->getClass() == 'Products') { ?>
+                                        -
+                                    <?php } ?>
+                                </p>
+                            </div>
+                            <p><?php echo $item->description; ?></p>
+                            <div class="mt-2">
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>

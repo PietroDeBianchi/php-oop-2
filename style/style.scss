@@ -25,6 +25,11 @@ nav {
     }
 
     i {
-        padding-left: 12px;
+        font-size: 24px;
+        color: black;
+
+        &:hover {
+            color: #316CF4;
+        }
     }
 }

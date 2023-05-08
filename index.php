@@ -72,7 +72,10 @@ $listItem = [
                 <div class="card">
                     <img src="<?php echo $item->image; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $item->name; ?> <i class="<?php echo $item->category->icon; ?>"></i></h5>
+                        <div class="d-flex justify-content-between">
+                            <h5 class=" card-title"><?php echo $item->name; ?></h5>
+                            <a href=""><i class="<?php echo $item->category->icon; ?>"></i></a>
+                        </div>
                         <span><?php echo $item->price; ?> €</span>
                         <p><?php echo $item->description; ?></p>
                         <div>
